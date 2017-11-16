@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+	
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/styles.css" />
+	<title>
+		Calculator
+	</title>
+	<script type="text/javascript" src="js/calculator.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+	<div class="container-fluid" id="header">
+		<div id="calc-show">
+			Calculator
+		</div>
+	</div>
+	<div id="cacl-drag" class="ui-widget-content">
+		<div id="calculator" v-if="show">
+
+			<div>
+
+				<div class="header-background">
+					<div class="close-calc">
+						<img src="images/close.png" width="14px" height="14px" v-on:click="show=false"/>
+					</div>
+					<div class="header-res">
+						<div id="result">
+							<input type="text" v-model="expression" v-on:keypress="keyup" class="calc-input" name="" />
+							<div>{{ result }}</div>
+						</div>
+					</div>
+				</div>
+
+
+				<table class="table-calc">
+					<tr>
+						<td v-on:click="clear">AC</td>
+						<td v-on:click="keyPad('(')">(</td>
+						<td v-on:click="keyPad(')')">)</td>
+						<td class="operand" v-on:click="keyPad('/')">&divide;</td>
+					</tr>
+					<tr>
+						<td v-on:click="keyPad('7')">7</td>
+						<td v-on:click="keyPad('8')">8</td>
+						<td v-on:click="keyPad('9')">9</td>
+						<td class="operand" v-on:click="keyPad('*')">&#10006;</td>
+					</tr>
+					<tr>
+						<td v-on:click="keyPad('4')">4</td>
+						<td v-on:click="keyPad('5')">5</td>
+						<td v-on:click="keyPad('6')">6</td>
+						<td class="operand" v-on:click="keyPad('-')">&mdash;</td>
+					</tr>
+					<tr>
+						<td v-on:click="keyPad('1')">1</td>
+						<td v-on:click="keyPad('2')">2</td>
+						<td v-on:click="keyPad('3')">3</td>
+						<td class="operand" v-on:click="keyPad('+')">+</td>
+					</tr>
+					<tr>
+						<td colspan="2" v-on:click="keyPad('0')">0</td>
+						<td v-on:click="keyPad('.')">&sbquo;</td>
+						<td v-on:click="calculate" class="operand">=</td>
+					</tr>
+					<tr></tr>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container-fluid" id="footer">
+		<div class="row">
+			NTPro TEST
+		</div>
+	</div>
+</body>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="js/vm_calc.js"></script>
+
+</html>

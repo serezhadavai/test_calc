@@ -1,0 +1,118 @@
+#header{
+	background-color: black;
+	opacity: 0.8;
+	color: white; 
+}
+#footer{
+	position: fixed;
+	background-color: black;
+	width: 100%;
+	opacity: 0.8;
+	color: white;
+	bottom: 0px;
+}
+body{
+	background-image: url(../images/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	min-height: 100vh;
+	width: 100%;
+
+}
+
+.btn-operation{
+	background-color: orange; 
+}
+
+#calc-result{
+	color: white;
+}
+
+#calc-input>input:focus{
+	border: none;
+
+}
+
+
+#calc-input>input{
+	background-color: transparent;
+	color: white;
+	border: none;
+	text-align: right;
+}
+
+.table-calc{
+	color: #000;
+	background-color: #ddd;
+}
+
+.table-calc td{
+	width: 60px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid #9f9f9f;
+	font-weight: 500;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.operand{
+	background-color: #F29432;
+	color: #fff;
+
+}
+
+#calculator{
+	position: absolute; 
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	margin: -120px 0 0 -120px ;
+}
+
+
+.header-background{
+	background-color: #34343a;
+	opacity: 0.8;
+}
+
+
+.header-res{
+
+	width: 100%;
+}
+
+#result{
+	width: 100%;
+}
+#result>input{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	width: 100%;
+	padding: 10px;
+	text-align: right;
+	cursor: default;
+	font-family: 'Lato', sans-serif;
+}
+#result>input:focus{
+	border: none;
+	outline:none;
+}
+
+#result>div{
+	height: auto;
+	color: #fff;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 20pt;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.close-calc>img{
+	margin: 5px;
+}
